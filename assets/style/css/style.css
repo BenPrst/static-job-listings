@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+.bg-header {
+  background-image: url("../../../images/bg-header-mobile.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: hsl(180, 29%, 50%);
+  min-width: 100vw;
+  height: 20vh;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 85vw;
+  height: 30vh;
+  border-radius: 0.625rem;
+  border-left: solid 0.635rem hsl(180, 29%, 50%);
+}
+.card .infos {
+  width: 100%;
+  height: 50%;
+}
+.card hr {
+  margin: 0 1.5rem;
+}
+.card .categories {
+  width: 100%;
+  height: 50%;
+}
+
+.attribution {
+  font-size: 0.6875rem;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}/*# sourceMappingURL=style.css.map */
