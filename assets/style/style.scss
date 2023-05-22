@@ -1,3 +1,5 @@
+@import "./_variables";
+
 * {
   margin: 0;
   padding: 0;
@@ -6,6 +8,8 @@
 body {
   min-width: 100vw;
   min-height: 100vh;
+  font-size: 0.9375rem;
+  background-color: $LightGrayishCyan;
 }
 
 .bg-header {
@@ -22,24 +26,56 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .card {
-  width: 85vw;
-  height: 30vh;
+  width: 80%;
+  height: 15rem;
   border-radius: 0.625rem;
   border-left: solid 0.635rem hsl(180, 29%, 50%);
-  .infos {
+  position: relative;
+  background-color: white;
+  margin-top: 3.2rem;
+  padding: 0.9375rem;
+  box-shadow: 1px 12px 35px -12px rgba(0, 0, 0, 0.44);
+  .top-card {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+  }
+  .bot-card {
     width: 100%;
     height: 50%;
   }
-  hr {
-    margin: 0 1.5rem;
+}
+
+.top-list {
+  list-style: none;
+  li {
+    margin: 0.625rem 0;
   }
-  .categories {
-    width: 100%;
-    height: 50%;
+  span {
+    margin: 0 0.625rem;
+    margin-left: 0;
   }
+}
+
+.bot-card-list {
+  display: flex;
+  flex-wrap: wrap;
+  li {
+    margin: 0.625rem 0.625rem;
+    margin-left: 0;
+  }
+}
+
+.img-companies {
+  position: absolute;
+  top: -1.8rem;
+  left: 1rem;
+  width: 3.5rem;
 }
 
 .attribution {
