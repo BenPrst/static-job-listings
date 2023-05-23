@@ -7,7 +7,7 @@
 }
 
 body {
-  min-width: 100vw;
+  max-width: 100vw;
   min-height: 100vh;
   font-size: 0.9375rem;
   background-color: hsl(180, 52%, 96%);
@@ -19,7 +19,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-color: hsl(180, 29%, 50%);
-  min-width: 100vw;
+  max-width: 100vw;
   height: 20vh;
 }
 

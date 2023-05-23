@@ -104,5 +104,27 @@ fetch("data.json")
       botList(companies.role);
       //LEVEL
       botList(companies.level);
+      //*FILTERS
+      let buttonFilters = document.querySelectorAll(".parameters");
+      //CLICK EVENT
+      buttonFilters.forEach((button) => {
+        button.addEventListener("click", () => {
+          //GETTING THE INFOS
+          let filterSelected = button.innerHTML;
+          //SELECT PARAMETERS
+          let cardParam = card.querySelectorAll(".parameters");
+          //TRANSFORM EACH PARAMETERS IN STRINGS
+          cardParam.forEach((param) => {
+            let soloParam = param.innerHTML;
+            console.log(soloParam);
+          });
+          // let verif = cardParam.some(
+          //   (soloParam) => soloParam == filterSelected
+          // );
+          // console.log(verif);
+
+          console.log(cardParam);
+        });
+      });
     }
   });
