@@ -23,6 +23,17 @@ body {
   background-color: $DesaturatedDarkCyan;
   max-width: 100vw;
   height: 20vh;
+  position: relative;
+}
+
+.filter-div {
+  width: 80%;
+  height: 40%;
+  background-color: white;
+  position: absolute;
+  bottom: -10%;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 
 main {
@@ -107,6 +118,7 @@ main {
     background-color: $LightGrayishCyanFilter;
     padding: 0.5rem 0.625rem;
     border-radius: 0.3125rem;
+    cursor: pointer;
   }
 }
 

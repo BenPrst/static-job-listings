@@ -109,21 +109,31 @@ fetch("data.json")
       //CLICK EVENT
       buttonFilters.forEach((button) => {
         button.addEventListener("click", () => {
-          //GETTING THE INFOS
           let filterSelected = button.innerHTML;
-          //SELECT PARAMETERS
-          let cardParam = card.querySelectorAll(".parameters");
-          //TRANSFORM EACH PARAMETERS IN STRINGS
-          cardParam.forEach((param) => {
-            let soloParam = param.innerHTML;
-            console.log(soloParam);
-          });
-          // let verif = cardParam.some(
-          //   (soloParam) => soloParam == filterSelected
-          // );
-          // console.log(verif);
+          let cards = document.querySelectorAll(".card");
 
-          console.log(cardParam);
+          let filterDiv = document.createElement("div");
+          filterDiv.classList.add("filter-div");
+          let headerDiv = document.getElementById("bg-header");
+          headerDiv.appendChild(filterDiv);
+
+          cards.forEach((card) => {
+            let cardParams = card.querySelectorAll(".parameters");
+            let matchFound = false;
+
+            cardParams.forEach((param) => {
+              let soloParam = param.innerHTML;
+              if (soloParam === filterSelected) {
+                matchFound = true;
+              }
+            });
+
+            if (matchFound) {
+              card.style.display = "flex"; // Show the card
+            } else {
+              card.style.display = "none"; // Hide the card
+            }
+          });
         });
       });
     }
